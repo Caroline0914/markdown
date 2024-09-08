@@ -1,0 +1,106 @@
+/* 初始化 */
+body {
+  margin: 0;
+}
+
+textarea {
+  resize: none;
+}
+
+/* 功能样式 */
+.unorderListEven,
+.unOrderListOdd {
+  padding-left: 40px;
+  position: relative;
+}
+
+.unorderListEven::before,
+.unOrderListOdd::before {
+  width: 4px;
+  height: 4px;
+  display: inline-block;
+  color: #000;
+  content: "";
+  position: absolute;
+  background-color: #000;
+  left: 22px;
+  top: 10px;
+  border: 1px solid;
+  z-index: 999;
+  border-radius: 50%;
+}
+
+.unorderListEven::before {
+  width: 5px;
+  height: 5px;
+  top: 9px;
+  left: 21px;
+  background-color: transparent;
+}
+
+.blockquote {
+  padding: 0 1em;
+  color: #6a737d;
+  border-left: 0.25em solid #dfe2e5;
+}
+
+pre.blockCode {
+  padding: 16px; 
+  overflow: auto; 
+  font-size: 85%; 
+  line-height: 1.45; 
+  background-color: #f6f8fa; 
+  border-radius: 3px;
+}
+
+.code {
+  padding: .2em 0;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(27, 31, 35, .05);
+  border-radius: 3px;
+}
+
+.code::before {
+  letter-spacing: -.2em;
+  content: "\00a0";
+}
+
+.code::after {
+  letter-spacing: -.2em;
+  content: "\00a0";
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* 页面 */
+.wrapper {
+  display: flex;
+}
+
+.left,
+.right {
+  border: 1px solid #999;
+  margin: 2%;
+  width: 48%;
+  overflow-y: scroll;
+  height: calc(100vh - 80px);
+  padding: 4px;
+}
+
+.left textarea {
+  width: calc(100% - 4px);
+  height: calc(100% - 10px);
+}
+
+.left textarea,
+.left textarea:focus-visible {
+  border: none;
+  outline: none;
+}
